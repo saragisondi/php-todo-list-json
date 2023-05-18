@@ -10,7 +10,10 @@
   <!-- Vue -->
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
-  <!-- Cdnjs -->
+  <!-- Axios -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js' integrity='sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ==' crossorigin='anonymous'></script>
+
+  <!-- Cdnjs Fontawesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   
   <!-- Google fonts -->
@@ -34,11 +37,13 @@
 
   <div class="input">
 
+  <!-- @keyup.enter="NewToDo"  -->
     <input
-    @keyup.enter="NewToDo" 
+    
     v-model.trim="AddToDo" class="input-text" type="text" placeholder= "devo fare......">
 
-    <button @click="NewToDo">
+    <!-- @click="NewToDo" -->
+    <button >
       <i class="fa-solid fa-plus"></i>
     </button>
 
@@ -55,27 +60,32 @@
           </div>
 
           <!-- faccio un ciclo per visualizzare gli elementi della lista -->
-          <li v-for="(list,i) in lists">
+          <!-- v-for="(list,i) in lists" -->
+          <li >
 
             <!-- condizione true -->
-            <span v-if="list.done === true" class="decoration" >
-              {{list.text}}
+            <!--v-if="list.done === true"  -->
+            <span  class="decoration" >
+              <!-- {{list.text}} -->
             </span>
 
             <!-- condizione false -->
-            <span v-else="list.done === false" > 
-              {{list.text}}
+            <!-- v-else="list.done === false" -->
+            <span  > 
+              <!-- {{list.text}} -->
             </span> 
 
             <span > 
 
               <!-- fatto -->
-              <input v-model="list.done" 
+              <!-- v-model="list.done" -->
+              <input  
               type="checkbox" name="checkbox" id="checkbox"> 
               
               <!-- cestino -->
+              <!-- @click="deleteRow(i)" -->
               <i 
-              @click="deleteRow(i)" 
+              
               class="fa-solid fa-trash-can">
               </i>
             </span> 

@@ -10,6 +10,17 @@ createApp({
   },
 
   methods:{
-    
-  }
+    getApi(){
+      axios.get(this.ApiUrl)
+      .then(result => {
+        console.log(result.data);
+        this.lists = result.data;
+        console.log(this.lists)
+      })
+    }
+  },
+
+  mounted(){
+    this.getApi();
+  },
 }).mount('#app');
