@@ -1,6 +1,6 @@
 <?php
 
-    $list = [
+    $lists = [
       [
         'text'=>'Fare la spesa',
         'done'=> false
@@ -24,8 +24,7 @@
     ];
 
     //salvo l'array in un json
-    $json_string = json_encode($list);
+    $json_string = json_encode($lists);
     //genero un file json
-    file_put_contents('todo-list.json',json_encode($list));
-    var_dump($json_string);
+    file_put_contents('todo-list.json',json_encode($lists));
 ?>

@@ -15,9 +15,10 @@ createApp({
       .then(result => {
         console.log(result.data);
         this.lists = result.data;
-        console.log(this.lists)
       })
-    }
+    },
+
+
   },
 
   mounted(){

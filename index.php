@@ -60,19 +60,17 @@
           </div>
 
           <!-- faccio un ciclo per visualizzare gli elementi della lista -->
-          <!-- v-for="(list,i) in lists" -->
-          <li >
+          
+          <li v-for="(list,i) in lists" >
 
             <!-- condizione true -->
-            <!--v-if="list.done === true"  -->
-            <span  class="decoration" >
-              <!-- {{list.text}} -->
+            <span v-if="list.done === true"  class="decoration" >
+              {{list.text}}
             </span>
 
             <!-- condizione false -->
-            <!-- v-else="list.done === false" -->
-            <span  > 
-              <!-- {{list.text}} -->
+            <span v-else="list.done === false" > 
+              {{list.text}}
             </span> 
 
             <span > 
